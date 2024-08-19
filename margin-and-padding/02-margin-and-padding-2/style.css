@@ -7,21 +7,40 @@ body {
   width: 400px;
   background: #fff;
   margin: 16px auto;
+  padding: 8px; 
+}
+
+.card > * {
+  margin: 8px auto; 
+
 }
 
 .title {
   background: #e3f4ff;
+  font-size: 16px; 
+  padding: 8px; 
 }
 
 .content {
   background: #e3f4ff;
+  padding: 16px 8px; /* This was content relative to box, not box relative to other box, so has to be padding*/  
 }
 
 .button-container {
   background: #e3f4ff;
+  text-align: center;  /* make the text align in center */ 
+  /*align-items: center;*/ /* this doesn't seem to actually do anything?*/ 
+  padding: 8px; 
 }
 
 button {
   background: white;
-  border: 1px solid #eee;
+  border: 1px solid #eee; /*Reference solution deffo doesn't put a br...so let's figure out how to do this*/ 
+  display: block;  /* This puts takes it out of flow(?) and puts it on a newline*/
+  margin: 0 auto; /* This centers it*/ 
+  padding: 8px 24px;  /* add the space on either side*/
 }
+
+/*
+  Not pixel perfect, I think come back and adjust the padding and margin later and make it DRY
+*/
